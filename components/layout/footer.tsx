@@ -107,17 +107,17 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <address className="not-italic text-muted-foreground space-y-2">
-              <p>123 Tech Street</p>
-              <p>San Francisco, CA 94107</p>
-              <p>United States</p>
+              <p>Kenwingston Business Square</p>
+              <p>Persiaran Bestari, 63000 Cyberjaya</p>
+              <p>Malaysia</p>
               <p className="mt-4">
                 <a href="mailto:info@afkbyte.com" className="hover:text-primary transition-colors">
                   info@afkbyte.com
                 </a>
               </p>
               <p>
-                <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                  +1 (234) 567-890
+                <a href="https://wa.me/601113207040" className="hover:text-primary transition-colors">
+                  +601113027040
                 </a>
               </p>
             </address>

@@ -16,9 +16,10 @@ export function ContactInfo() {
           icon={<MapPin className="h-5 w-5 text-primary" />}
           title="Our Location"
           details={[
-            "123 Tech Street",
-            "San Francisco, CA 94107",
-            "United States"
+            "Kenwingston Business Square",
+            "Persiaran Bestari,",
+            "63300 Cyberjaya,",
+            "Malaysia"
           ]}
         />
         
@@ -26,8 +27,7 @@ export function ContactInfo() {
           icon={<Phone className="h-5 w-5 text-primary" />}
           title="Phone Number"
           details={[
-            "+1 (234) 567-890",
-            "+1 (234) 567-891"
+            "+601113027040"
           ]}
         />
         
