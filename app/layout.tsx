@@ -23,7 +23,13 @@ export default function RootLayout({
         <Providers>
           <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
+            {/* Wrap children in a container to center content and apply max-width.
+                The 'container' class (typically from Tailwind config or globals.css via Shadcn/UI)
+                should provide max-width and horizontal padding. 'mx-auto' handles the centering.
+                'w-full' on main ensures it behaves as a block for the centering logic of its child. */}
+            <main className="flex-1 w-full">
+              <div className="container mx-auto">{children}</div>
+            </main>
             <Footer />
           </div>
         </Providers>

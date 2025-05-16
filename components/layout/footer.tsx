@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <footer className="bg-card text-card-foreground py-12 mt-12">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">AFK Byte</h3>
