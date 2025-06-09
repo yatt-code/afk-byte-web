@@ -37,7 +37,7 @@ export function Header() {
           : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between py-4">
+      <div className="container mx-auto flex h-16 items-center justify-between py-4 px-4 md:px-8 lg:px-12">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent font-oxanium font-[600]">
             &lt;afkbyte/&gt;
