@@ -11,7 +11,7 @@ export function ClientLogos() {
             <div 
               key={index}
               className={cn(
-                "text-muted-foreground/70 hover:text-foreground transition-colors",
+                "text-muted-foreground/70 hover:text-blue-600 transition-colors",
                 "h-8 flex items-center"
               )}
             >

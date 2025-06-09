@@ -14,61 +14,73 @@ export function HeroSection() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-background to-muted py-20 md:py-32">
-      <div className="container relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div className="relative overflow-hidden bg-gradient-to-b from-background via-background/95 to-muted/80 py-24 md:py-40">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-background to-background" />
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-[2000px] mx-auto">
           <div className={cn(
-            "space-y-6 transition-all duration-1000 transform",
+            "lg:col-span-5 space-y-8 transition-all duration-1000 transform",
             visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           )}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-                Creating Your Dream
-              </span>{" "}
-              with Innovative IT Solutions
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-md">
-              We help businesses transform through technology with tailored IT consultancy and development services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" asChild>
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-foreground">
+                <span className="bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200 dark:from-blue-300 dark:via-blue-200 dark:to-blue-100 bg-clip-text text-transparent">
+                  Creating Your Dream
+                </span>{" "}
+                with Innovative IT Solutions
+              </h1>
+              <p className="text-lg md:text-xl text-foreground/80 dark:text-foreground/90 max-w-lg leading-relaxed">
+                We help businesses transform through technology with tailored IT consultancy and development services.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button 
+                size="lg" 
+                className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white transition-colors"
+                asChild
+              >
                 <Link href="/contact">
                   Get Started
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors"
+                asChild
+              >
                 <Link href="/services">Our Services</Link>
               </Button>
             </div>
           </div>
 
           <div className={cn(
-            "relative transition-all duration-1000 delay-300",
+            "lg:col-span-7 relative transition-all duration-1000 delay-300",
             visible ? "opacity-100" : "opacity-0"
           )}>
             <div className="relative flex justify-center">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-primary/10 rounded-lg blur-3xl" /> {/* Glow effect */}
-              <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4"> {/* Adjusted grid for responsiveness */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-blue-400/5 to-blue-300/5 dark:from-blue-400/10 dark:via-blue-300/10 dark:to-blue-200/10 rounded-2xl blur-3xl" />
+              <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <HeroCard
-                  icon={<Code className="h-8 w-8 text-blue-500" />}
+                  icon={<Code className="h-8 w-8 text-blue-600" />}
                   title="Web Development"
-                  description="Responsive websites and web applications" // translate-y removed
+                  description="Responsive websites and web applications"
                 />
                 <HeroCard
-                  icon={<Server className="h-8 w-8 text-purple-500" />}
+                  icon={<Server className="h-8 w-8 text-blue-600" />}
                   title="System Integration"
-                  description="Seamless integration of complex systems" // -translate-y removed
+                  description="Seamless integration of complex systems"
                 />
                 <HeroCard
-                  icon={<Cloud className="h-8 w-8 text-green-500" />}
+                  icon={<Cloud className="h-8 w-8 text-blue-600" />}
                   title="Cloud Services"
-                  description="Scalable and secure cloud solutions" // -translate-y removed
+                  description="Scalable and secure cloud solutions"
                 />
                 <HeroCard
-                  icon={<Server className="h-8 w-8 text-orange-500" />}
+                  icon={<Server className="h-8 w-8 text-blue-600" />}
                   title="IT Strategy"
-                  description="Strategic guidance for digital transformation" // translate-y removed
+                  description="Strategic guidance for digital transformation"
                 />
               </div>
             </div>
@@ -89,12 +101,14 @@ interface HeroCardProps {
 function HeroCard({ icon, title, description, className }: HeroCardProps) {
   return (
     <div className={cn(
-      "bg-card/70 backdrop-blur-sm border border-border rounded-lg p-6 shadow-lg transition-all hover:shadow-xl hover:-translate-y-1", 
+      "bg-card/60 backdrop-blur-sm border border-blue-100/50 dark:border-blue-800/50 rounded-xl p-6 shadow-lg",
+      "transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-blue-200/50 dark:hover:border-blue-700/50",
+      "hover:bg-card/80 dark:hover:bg-card/80",
       className
     )}>
-      <div className="mb-4">{icon}</div>
-      <h3 className="font-semibold text-lg mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground">{description}</p>
+      <div className="mb-4 p-2 bg-blue-50/50 dark:bg-blue-950/30 rounded-lg w-fit">{icon}</div>
+      <h3 className="font-semibold text-lg mb-2 text-blue-900 dark:text-blue-100">{title}</h3>
+      <p className="text-sm text-foreground/80 dark:text-foreground/90 leading-relaxed">{description}</p>
     </div>
   );
 }

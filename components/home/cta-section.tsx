@@ -6,7 +6,7 @@ export function CtaSection() {
   return (
     <section className="py-16 md:py-24">
       <div className="container">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary/20 via-primary/10 to-background border border-primary/10">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-500/20 via-blue-400/10 to-background border border-blue-500/10">
           <div className="relative z-10 px-6 py-12 md:px-12 md:py-16">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">

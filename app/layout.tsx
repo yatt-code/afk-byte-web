@@ -28,7 +28,7 @@ export default function RootLayout({
                 should provide max-width and horizontal padding. 'mx-auto' handles the centering.
                 'w-full' on main ensures it behaves as a block for the centering logic of its child. */}
             <main className="flex-1 w-full">
-              <div className="container mx-auto">{children}</div>
+              <div className="container mx-auto px-4 md:px-8 lg:px-12">{children}</div>
             </main>
             <Footer />
           </div>

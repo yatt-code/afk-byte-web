@@ -3,7 +3,7 @@ import { CheckCircle, Target, Award, Heart } from 'lucide-react';
 
 export function VisionMission() {
   return (
-    <section className="py-12 bg-muted">
+    <section className="py-12">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <Card className="border-none shadow-md">
